@@ -2,7 +2,8 @@
 
 [![Version](https://img.shields.io/badge/Version-1.0-green.svg)]() 
 
-A retro ASCII-style implementation of the classic Flappy Bird game built with Python and Pygame. Features authentic terminal-style graphics with green phosphor aesthetic. Detailed manual compile instructions. Building from source may work on Mac and Linux - added a beta .PKG build for Linux (untested). 
+A retro ASCII-style implementation of the classic Flappy Bird game built with Python and Pygame. Features authentic terminal-style graphics with green phosphor aesthetic. Detailed manual compile instructions. Building from source may work on Mac and Linux - 
+
 <img width="794" height="620" alt="Screenshot 2025-12-04 105518" src="https://github.com/user-attachments/assets/a7d0e83e-ed31-4f54-aee5-4695182551f5" />
 
 ## Features
@@ -76,22 +77,6 @@ Or download the self contained Windows ( or beta Linux .PKG) build in Releases. 
 
 <b> RULES: </b> You are the ASCII bird ( >o) ), navigate through the pipe gaps by pressing SPACE to flap. Do NOT hit the pipes, ceiling, or ground!
 
-## Project Structure
-```
-Extracted_files/
-├── README.md                # This file
-├── flappy_ascii.py          # Main game logic
-├── build_exe.bat            # Windows build script for creating .exe
-├── build_exe.sh             # Linux/Mac build script
-├── PACKAGING_README.md      # Detailed packaging instructions
-├── QUICK_REFERENCE.txt      # Quick packaging guide
-├── LICENSE                  # Auto-generated Apache 2.0 License
-├── NOTICE                   # Apache 2.0 compatible attribution notice
-├── requirements.txt         # Requirements file for building
-├── .gitignore               # Allows release files over 25 mb
-     
-```
-
 ## Technical Details
 - Built using **Python 3.11** for compatibility with pygame
 - Uses physics-based movement with gravity and flapping mechanics
@@ -139,6 +124,6 @@ specific attribution requirements when creating derivative works.
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/captainzero)
 
-Version: 1.0 | Author: captainzero93 |
+Version: 0.1 | Author: captainzero93 |
 
 GitHub: https://github.com/captainzero93/
