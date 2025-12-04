@@ -4,8 +4,6 @@
 
 check out Pygame Snake here: https://github.com/captainzero93/simple-snake-python-pygme
 
-check out Pygame ANSCII Flappy Bird here: https://github.com/captainzero93/flappy-ascii-PYGAME
-
 check out Pygame ANSCII Tetris here: https://github.com/captainzero93/Anscii-Tetris-PYGAME
 
 <img width="794" height="620" alt="Screenshot 2025-12-04 105518" src="https://github.com/user-attachments/assets/feea82ef-a704-4a5a-99bd-e7d1a16ebf95" />
