@@ -100,14 +100,6 @@ pip install pyinstaller
 pyinstaller --onefile --windowed --name "FlappyBird_ASCII" flappy_ascii.py
 ```
 
-Your executable will be in `dist/FlappyBird_ASCII.exe`
-
-### Automated Method:
-- **Windows**: Double-click `build_exe.bat`
-- **Linux/Mac**: Run `./build_exe.sh`
-
-See `PACKAGING_README.md` for detailed instructions.
-
 ---
 
 **Note**: This implementation requires the precompiled wheel file (`pygame-2.6.1-cp311-win_amd64.whl`) due to Windows-specific build requirements. Do not attempt to compile from source on Python 3.12+ as it will fail.
@@ -115,7 +107,7 @@ The reccomended way to instal pygame-2.6.1-cp311-win-amd64.whl is pip install --
 
 
 <b> Again, Windows users can use the Release .exe in the Releases section, ONLY do this if you trust the source, I recommend reading the code from this repo first.
-Refer to the documentatiom for your Linux Distro for unzipping and instaling the .PKG zip / file. </b>
+ </b>
 
 ## Attribution
 
