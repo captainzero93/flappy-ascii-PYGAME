@@ -1,47 +1,52 @@
-# ASCII Flappy Bird 🐦 - Pygame
+# ASCII Tetris 🎮 - Pygame
 
-[![Version](https://img.shields.io/badge/Version-0.1.0-green.svg)]() 
+[![Version](https://img.shields.io/badge/Version-1.0.0-green.svg)]() 
 
-A retro ASCII-style implementation of the classic Flappy Bird game built with Python and Pygame. Features authentic terminal-style graphics with green phosphor aesthetic. Detailed manual compile instructions. Building from source may work on Mac and Linux - 
+A retro ASCII-style implementation of the classic Tetris game built with Python and Pygame. Features clean terminal-style graphics with colorful block aesthetics and authentic Tetris mechanics. Detailed manual compile instructions. Building from source may work on Mac and Linux - 
 
 check out Pygame Snake here: https://github.com/captainzero93/simple-snake-python-pygme
+check out Pygame ANSCII Flappy Bird here: https://github.com/captainzero93/flappy-ascii-PYGAME
 
-<img width="794" height="620" alt="Screenshot 2025-12-04 105518" src="https://github.com/user-attachments/assets/a7d0e83e-ed31-4f54-aee5-4695182551f5" />
+[Screenshot placeholder - Add your game screenshot here]
 
 ## Features
-- Classic flappy bird mechanics: navigate through pipes!
-- Retro ASCII graphics with green terminal aesthetic
-- Simple spacebar controls for flapping
-- Score tracking system
-- Game over when hitting pipes, ceiling, or ground
-- Clean UI with ASCII art bird and pipe obstacles
-- Smooth physics with gravity simulation
+- Classic Tetris mechanics with all 7 tetromino shapes (I, O, T, S, Z, J, L)
+- Ghost piece preview showing landing position
+- Retro ASCII graphics with colored block aesthetic
+- Intuitive arrow key and space bar controls
+- Progressive difficulty system - speed increases with level
+- Line clearing with score multipliers (1-4 lines)
+- Next piece preview system
+- Wall kick rotation mechanics
+- Score tracking, lines cleared, and level progression
+- Smooth piece movement with gravity simulation
+- Game over detection with restart capability
 
 ## Requirements
 - **Python 3.11** (required for precompiled wheel compatibility)
 - Pygame (`pygame==2.6.1`)
-- all other requirments are in the requirments.txt even if they are not needed
+- all other requirements are in the requirements.txt even if they are not needed
 
- ## Compiled setup - Windows users can use the Release .exe in the Releases section, ONLY do this if you trust the source, I recommend reading the code from this repo first. Refer to the documentatiom for your Linux Distro for unzipping and instaling the beta Linux .PKG zip / file.
+## Compiled setup - Windows users can use the Release .exe in the Releases section, ONLY do this if you trust the source, I recommend reading the code from this repo first. Refer to the documentation for your Linux Distro for unzipping and installing the beta Linux .PKG zip / file.
   
 ## Manual installation & Setup
 ### Step 1: Create Virtual Environment / Clone repo
 
-<b> Download and extract this repo, Install Python 11 - ensire you check 'Add to path in the installer. Open CMD from the extracted folder; </b>
+<b> Download and extract this repo, Install Python 11 - ensure you check 'Add to path' in the installer. Open CMD from the extracted folder; </b>
 
 ```bash
-python -m venv flappy_venv
+python -m venv tetris_venv
 
 or Create venv using Python 3.11 explicitly:
 
-python -m venv flappy_venv --system-site-packages
+python -m venv tetris_venv --system-site-packages
 
 ```
 
 ### Step 2: Activate Virtual Environment
 ```powershell
 # Windows (PowerShell):
-.\flappy_venv\Scripts\activate.ps1
+.\tetris_venv\Scripts\activate.ps1
 
 ```
 
@@ -64,9 +69,9 @@ pip install --user  "folder_with_pygame.whl package\pygame-2.6.1-cp311-win_amd64
 
 ## Running the Game
 ```bash
-From inside the folder flappy_ascii.py exists;
+From inside the folder tetris.py exists;
 
-python flappy_ascii.py
+python tetris.py
 
 ```
 Or download the self contained Windows ( or beta Linux .PKG) build in Releases. ( Only do this if you trust the source).
@@ -74,20 +79,28 @@ Or download the self contained Windows ( or beta Linux .PKG) build in Releases. 
 ### Controls
 | Key | Action |
 |-----|--------|
-| SPACE  | Flap / Start Game / Restart |
+| ← →  | Move piece left/right |
+| ↑  | Rotate piece clockwise |
+| ↓  | Soft drop (faster falling) |
+| SPACE  | Hard drop (instant placement) |
+| R  | Restart game (after game over) |
 | ESC  | Quit Game |
 
-<b> RULES: </b> You are the ASCII bird ( >o) ), navigate through the pipe gaps by pressing SPACE to flap. Do NOT hit the pipes, ceiling, or ground!
+<b> RULES: </b> Rotate and position falling tetromino pieces to create complete horizontal lines. Each completed line clears and awards points. The game ends when pieces stack to the top of the playfield!
 
 ## Technical Details
 - Built using **Python 3.11** for compatibility with pygame
-- Uses physics-based movement with gravity and flapping mechanics
-- Score increases by one point for each pipe successfully passed
-- Game ends when bird collides with pipes, ceiling, or ground
-- Retro ASCII aesthetic with green phosphor terminal colors
-- Bird sprite: `>o)` and `(_>` characters
-- Pipes rendered with `║` characters
-- Clean, readable code with modular class structure
+- Uses physics-based falling mechanics with progressive speed increase
+- Score system: 100/300/500/800 points for 1/2/3/4 lines cleared (multiplied by level)
+- Level increases every 10 lines cleared
+- Fall speed accelerates with each level (minimum 100ms delay)
+- All 7 classic tetromino shapes with authentic colors
+- Ghost piece shows exact landing position
+- Wall kick system for improved rotation mechanics
+- Clean, modular code with separate Tetromino and TetrisGame classes
+- 10x20 playfield grid matching classic Tetris dimensions
+- Next piece preview in sidebar
+- Real-time statistics display (score, lines, level)
 
 ## Building Single-File Executable
 
@@ -99,13 +112,31 @@ To package the game as a standalone .exe file:
 pip install pyinstaller
 
 # Build the executable
-pyinstaller --onefile --windowed --name "FlappyBird_ASCII" flappy_ascii.py
+pyinstaller --onefile --windowed --name "Tetris_ASCII" tetris.py
 ```
 
 ---
 
+## Game Mechanics
+
+### Scoring System
+- **Single Line**: 100 × Level
+- **Double Lines**: 300 × Level  
+- **Triple Lines**: 500 × Level
+- **Tetris (4 Lines)**: 800 × Level
+- **Soft Drop**: +1 point per cell
+- **Hard Drop**: +2 points per cell
+
+### Level Progression
+- Start at Level 1
+- Level increases every 10 lines cleared
+- Fall speed decreases by 50ms per level
+- Minimum fall speed: 100ms (Level 9+)
+
+---
+
 **Note**: This implementation requires the precompiled wheel file (`pygame-2.6.1-cp311-win_amd64.whl`) due to Windows-specific build requirements. Do not attempt to compile from source on Python 3.12+ as it will fail.
-The reccomended way to instal pygame-2.6.1-cp311-win-amd64.whl is pip install --user pygame==2.6.1  ( Installs from PyPI )
+The recommended way to install pygame-2.6.1-cp311-win-amd64.whl is pip install --user pygame==2.6.1  ( Installs from PyPI )
 
 
 <b> Again, Windows users can use the Release .exe in the Releases section, ONLY do this if you trust the source, I recommend reading the code from this repo first.
@@ -118,6 +149,6 @@ specific attribution requirements when creating derivative works.
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/captainzero)
 
-Version: 0.1 | Author: captainzero93 |
+Version: 1.0 | Author: captainzero93 |
 
 GitHub: https://github.com/captainzero93/
