@@ -1,6 +1,6 @@
 # ASCII Flappy Bird 🐦 - Pygame
 
-[![Version](https://img.shields.io/badge/Version-1.0-green.svg)]() 
+[![Version](https://img.shields.io/badge/Version-0.1.0-green.svg)]() 
 
 A retro ASCII-style implementation of the classic Flappy Bird game built with Python and Pygame. Features authentic terminal-style graphics with green phosphor aesthetic. Detailed manual compile instructions. Building from source may work on Mac and Linux - 
 
