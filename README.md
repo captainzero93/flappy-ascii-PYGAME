@@ -4,6 +4,8 @@
 
 A retro ASCII-style implementation of the classic Flappy Bird game built with Python and Pygame. Features authentic terminal-style graphics with green phosphor aesthetic. Detailed manual compile instructions. Building from source may work on Mac and Linux - 
 
+check out Pygame Snake here: https://github.com/captainzero93/simple-snake-python-pygme
+
 <img width="794" height="620" alt="Screenshot 2025-12-04 105518" src="https://github.com/user-attachments/assets/a7d0e83e-ed31-4f54-aee5-4695182551f5" />
 
 ## Features
