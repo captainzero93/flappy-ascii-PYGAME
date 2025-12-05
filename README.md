@@ -6,6 +6,8 @@ check out Pygame Snake here: https://github.com/captainzero93/simple-snake-pytho
 
 check out Pygame ASCII Tetris here: https://github.com/captainzero93/ASCII-Tetris
 
+check out Pygame ASCII Space Invaders here: https://github.com/captainzero93/Space-ASCII-Invaders-Pygame
+
 <img width="794" height="620" alt="Screenshot 2025-12-04 105518" src="https://github.com/user-attachments/assets/feea82ef-a704-4a5a-99bd-e7d1a16ebf95" />
 
 
