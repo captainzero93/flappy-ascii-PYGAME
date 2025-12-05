@@ -8,8 +8,7 @@ check out Pygame ASCII Tetris here: https://github.com/captainzero93/ASCII-Tetri
 
 check out Pygame ASCII Space Invaders here: https://github.com/captainzero93/Space-ASCII-Invaders-Pygame
 
-<img width="794" height="620" alt="Screenshot 2025-12-04 105518" src="https://github.com/user-attachments/assets/feea82ef-a704-4a5a-99bd-e7d1a16ebf95" />
-
+<img width="800" height="628" alt="Screenshot 2025-12-05 044236" src="https://github.com/user-attachments/assets/11000e2e-4031-4c47-bfe3-f0d13e121567" />
 
 A retro ASCII-style implementation of the classic Flappy Bird game built with Python and Pygame. Features authentic terminal-style graphics with green phosphor aesthetic. Detailed manual compile instructions. Building from source may work on Mac and Linux - added a beta .PKG build for Linux (untested). 
 
